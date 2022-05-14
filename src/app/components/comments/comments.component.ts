@@ -9,7 +9,7 @@ import {CommentService} from "../../services";
 })
 export class CommentsComponent implements OnInit {
 
-  comments: IComment[] = [];
+  comments: IComment[];
 
   constructor(private commentService: CommentService) { }
 

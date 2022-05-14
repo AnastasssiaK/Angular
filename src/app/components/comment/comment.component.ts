@@ -9,7 +9,7 @@ import {IComment} from "../../models";
 export class CommentComponent implements OnInit {
 
   @Input()
-  comment!: IComment;
+  comment: IComment;
 
   constructor() { }
 
