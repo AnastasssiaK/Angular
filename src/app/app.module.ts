@@ -23,10 +23,10 @@ const routes: Route[] = [
           {path: ':id', component: UserDetailsComponent},
         ]},
       {path: 'posts', component: PostsComponent, children: [
-
+          {path: ':id', component: PostDetailsComponent}
         ]},
       {path: 'comments', component: CommentsComponent, children: [
-
+          {path: ':id', component: CommentDetailsComponent}
         ]},
     ]}
 ]
