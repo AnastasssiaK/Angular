@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+.active a {
+  color: deeppink;
+}
+a:hover {
+  transition: 0.3s;
+  color: deeppink;
+}
