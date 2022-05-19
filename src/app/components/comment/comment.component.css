@@ -1,0 +1,12 @@
+.comment {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.active a {
+  color: deeppink;
+}
+a:hover {
+  transition: 0.3s;
+  color: deeppink;
+}

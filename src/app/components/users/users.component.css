@@ -1,0 +1,14 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 300px;
+}
+h1 {
+  text-align: center;
+}

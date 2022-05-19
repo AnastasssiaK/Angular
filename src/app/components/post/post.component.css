@@ -1,0 +1,16 @@
+.post {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.active button {
+  color: deeppink;
+}
+button:hover {
+  transition: 0.3s;
+  color: white;
+  background: deeppink;
+}
+button {
+  cursor: pointer;
+}

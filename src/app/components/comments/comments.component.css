@@ -1,0 +1,14 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 170px;
+}
+h1 {
+  text-align: center;
+}
