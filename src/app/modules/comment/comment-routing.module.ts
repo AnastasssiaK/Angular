@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {CommentDetailsComponent} from "./components/comment-details/comment-details.component";
 import {CommentsComponent} from "./components/comments/comments.component";
+import {CommentResolveService} from "./services";
+import {MyGuardGuard} from "./guards";
 
 const routes: Routes = [
-  {path: '', component: CommentsComponent, children: [
-      {path: ':id', component: CommentDetailsComponent}
+  {path: '', component: CommentsComponent, canActivate: [MyGuardGuard], children: [
+      {path: ':id', component: CommentDetailsComponent, resolve: {data: CommentResolveService}}
     ]}
 ];
 
