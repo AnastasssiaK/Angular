@@ -5,14 +5,16 @@ import {
   HttpEvent,
   HttpInterceptor, HttpErrorResponse
 } from '@angular/common/http';
-import {catchError, Observable, switchAll, switchMap, throwError} from 'rxjs';
-import {AuthService} from "./services";
-import {Router} from "@angular/router";
-import {IToken} from "./interfaces";
+import {catchError, switchMap} from 'rxjs/operators'
+import {Router} from '@angular/router';
+import {Observable, throwError} from 'rxjs';
+
+import {AuthService} from './services';
+import {IToken} from './interfaces';
 
 @Injectable()
 export class MainInterceptor implements HttpInterceptor {
-  isRefreshing = false;
+  isRefreshing = false
 
   constructor(private authService: AuthService, private router: Router) {
   }
@@ -36,7 +38,7 @@ export class MainInterceptor implements HttpInterceptor {
 
   addToken(request: HttpRequest<any>, token: string): HttpRequest<any> {
     return request.clone({
-      setHeaders: {Authoriazation: `Bearer ${token}`}
+      setHeaders: {Authorization: `Bearer ${token}`}
     })
   }
 
@@ -47,14 +49,13 @@ export class MainInterceptor implements HttpInterceptor {
         switchMap((tokens: IToken) => {
           return next.handle(this.addToken(request, tokens.access))
         }),
-        catchError((err) => {
+        catchError(() => {
           this.isRefreshing = false
-          this.authService.deleteToken()
+          this.authService.deleteToken();
           this.router.navigate(['login'])
           return throwError(() => new Error('token invalid or expired'))
         })
       )
     }
   }
-
 }
