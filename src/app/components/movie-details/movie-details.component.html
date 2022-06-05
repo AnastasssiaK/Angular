@@ -1,0 +1,19 @@
+<hr>
+<div *ngIf="movieDetails" class="movieDetails">
+<div>
+  <img src="https://image.tmdb.org/t/p/original{{movieDetails.poster_path}}" width="350px"  alt="poster">
+</div>
+  <div>
+    <h2>{{movieDetails.title}}</h2>
+    <p><b>Genres:</b> {{movieDetails.genres}}</p>
+    <p>Original language: {{movieDetails.original_language}}</p>
+    <p>Budget: {{movieDetails.budget}}</p>
+    <p>Home page: {{movieDetails.homepage}}</p>
+    <p>Production companies: {{movieDetails.production_companies}}</p>
+    <p>Production countries: {{movieDetails.production_countries}}</p>
+    <p><b>Release date:</b> {{movieDetails.release_date}}</p>
+    <p><b>Popularity: {{movieDetails.vote_average}}/{{movieDetails.popularity}}</b></p>
+    <p><b>Runtime: {{movieDetails.runtime}}</b></p>
+    <p><b>Overview:</b> {{movieDetails.overview}}</p>
+  </div>
+</div>

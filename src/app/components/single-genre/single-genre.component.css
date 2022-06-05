@@ -1,0 +1,11 @@
+.genre {
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.genre:hover {
+  color: snow;
+  transition: 0.3s;
+  border: 1px solid white;
+  padding: 10px;
+}
