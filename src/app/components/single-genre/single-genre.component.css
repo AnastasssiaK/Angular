@@ -4,8 +4,16 @@
   border-radius: 20px;
 }
 .genre:hover {
-  color: snow;
   transition: 0.3s;
   border: 1px solid white;
   padding: 10px;
 }
+a {
+  text-decoration: none;
+  color: #61626b;
+}
+a:hover {
+  color: snow;
+}
+
+

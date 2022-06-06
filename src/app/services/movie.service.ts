@@ -21,4 +21,5 @@ export class MovieService {
   getById(id: number): Observable<ISingleMovie> {
     return this.httpClient.get<ISingleMovie>(`${urls.movie}/${id}`)
   }
+
 }
